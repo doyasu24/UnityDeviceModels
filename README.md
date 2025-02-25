@@ -33,7 +33,7 @@ public class SampleComponent : MonoBehaviour
 ```
 
 ## Install
-You can add https://github.com/doyasu24/UnityDeviceModels.git?path=Assets/Plugins/UnityDeviceModels#0.1.0 to Package Manager.
+You can add https://github.com/doyasu24/UnityDeviceModels.git?path=Assets/Plugins/DeviceModels#0.1.0 to Package Manager.
 
 ## License
 MIT License
