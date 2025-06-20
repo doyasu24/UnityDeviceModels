@@ -1,5 +1,7 @@
 // ReSharper disable InconsistentNaming
 
+using System;
+
 namespace DeviceModels
 {
     /// <summary>
@@ -77,8 +79,10 @@ namespace DeviceModels
         /// </summary>
         /// <param name="deviceModel"><see cref="UnityEngine.Device.SystemInfo.deviceModel">SystemInfo.deviceModel</see></param>
         /// <returns></returns>
+        /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="deviceModel"/> is null.</exception>
         public static iPhoneDeviceGeneration Parse(string deviceModel)
         {
+            if (deviceModel == null) throw new ArgumentNullException(nameof(deviceModel));
             return deviceModel switch
             {
                 "i386" or "x86_64" or "arm64" => iPhoneDeviceGeneration.iPhoneSimulator,
@@ -129,7 +133,9 @@ namespace DeviceModels
                 "iPhone17,3" => iPhoneDeviceGeneration.iPhone16,
                 "iPhone17,4" => iPhoneDeviceGeneration.iPhone16Plus,
                 "iPhone17,5" => iPhoneDeviceGeneration.iPhone16e,
-                _ => deviceModel.StartsWith("iPhone") ? iPhoneDeviceGeneration.iPhoneUnknown : iPhoneDeviceGeneration.Unknown
+                _ => deviceModel.StartsWith("iPhone")
+                    ? iPhoneDeviceGeneration.iPhoneUnknown
+                    : iPhoneDeviceGeneration.Unknown
             };
         }
     }
