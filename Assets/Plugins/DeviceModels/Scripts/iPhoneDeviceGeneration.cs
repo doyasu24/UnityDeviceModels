@@ -128,7 +128,7 @@ namespace DeviceModels
                 "iPhone17,2" => iPhoneDeviceGeneration.iPhone16ProMax,
                 "iPhone17,3" => iPhoneDeviceGeneration.iPhone16,
                 "iPhone17,4" => iPhoneDeviceGeneration.iPhone16Plus,
-                "iPhone17.5" => iPhoneDeviceGeneration.iPhone16e,
+                "iPhone17,5" => iPhoneDeviceGeneration.iPhone16e,
                 _ => deviceModel.StartsWith("iPhone") ? iPhoneDeviceGeneration.iPhoneUnknown : iPhoneDeviceGeneration.Unknown
             };
         }
