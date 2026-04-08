@@ -1,9 +1,13 @@
 {
   "name": "com.doyasu24.devicemodels",
   "displayName": "DeviceModels",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "unity": "2022.3",
   "description": "UnityDeviceModels provides an alternative enum for device models that is available in all build targets.",
+  "author": {
+    "name": "doyasu24",
+    "url": "https://github.com/doyasu24/UnityDeviceModels"
+  },
   "license": "MIT",
   "dependencies": {}
 }
