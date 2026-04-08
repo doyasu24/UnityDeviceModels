@@ -68,6 +68,11 @@ namespace DeviceModels
         iPhone16Pro,
         iPhone16ProMax,
         iPhone16e,
+        iPhone17,
+        iPhone17Pro,
+        iPhone17ProMax,
+        iPhoneAir,
+        iPhone17e,
     }
 
     public static class iPhoneDeviceGenerations
@@ -133,6 +138,11 @@ namespace DeviceModels
                 "iPhone17,3" => iPhoneDeviceGeneration.iPhone16,
                 "iPhone17,4" => iPhoneDeviceGeneration.iPhone16Plus,
                 "iPhone17,5" => iPhoneDeviceGeneration.iPhone16e,
+                "iPhone18,1" => iPhoneDeviceGeneration.iPhone17Pro,
+                "iPhone18,2" => iPhoneDeviceGeneration.iPhone17ProMax,
+                "iPhone18,3" => iPhoneDeviceGeneration.iPhone17,
+                "iPhone18,4" => iPhoneDeviceGeneration.iPhoneAir,
+                "iPhone18,5" => iPhoneDeviceGeneration.iPhone17e,
                 _ => deviceModel.StartsWith("iPhone")
                     ? iPhoneDeviceGeneration.iPhoneUnknown
                     : iPhoneDeviceGeneration.Unknown
